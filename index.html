@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversario</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+    }
+    .corazon {
+      font-size: 400px;
+      color: red;
+      animation: latido 1s infinite;
+    }
+    @keyframes latido {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .mensaje {
+      font-size: 32px;
+      color: #b30000;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="corazon">❤</div>
+  <div class="mensaje">Feliz 3er Aniversario, mi amor 💕</div>
+</body>
+</html>
