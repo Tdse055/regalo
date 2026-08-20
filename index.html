@@ -2,37 +2,152 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Feliz Aniversario</title>
+  <title>Feliz 3er Aniversario 💖</title>
   <style>
     body {
-      background-color: #ffe6e6;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #fff0f5);
+      color: #b30000;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 40px 20px;
+      font-size: 48px;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Galería con fotos en forma de corazón */
+    .galeria {
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      font-family: 'Arial', sans-serif;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
     }
-    .corazon {
-      font-size: 400px;
-      color: red;
-      animation: latido 1s infinite;
+
+    .patitos {
+      position: relative;
+      z-index: 1;
     }
-    @keyframes latido {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+
+    .corazones-orbita {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      z-index: 2;
+      overflow: visible;
     }
-    .mensaje {
+
+    .corazon-flotante {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #e63956;
       font-size: 32px;
-      color: #b30000;
-      margin-top: 20px;
-      text-align: center;
+      transform-origin: 0 0;
+      animation: orbitar 12s linear infinite;
+      animation-delay: var(--retraso);
+    }
+
+    @keyframes orbitar {
+      from {
+        opacity: 0.7;
+        transform: rotate(var(--angulo)) translateX(115px) scale(0.9);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(calc(var(--angulo) + 180deg)) translateX(115px) scale(1.1);
+      }
+      to {
+        opacity: 0.7;
+        transform: rotate(calc(var(--angulo) + 360deg)) translateX(115px) scale(0.9);
+      }
+    }
+
+    @keyframes latido {
+      from { opacity: 0.65; scale: 0.88; }
+      to { opacity: 1; scale: 1.12; }
+    }
+
+    .galeria img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      clip-path: path("M140 58 C105 8 18 12 18 92 C18 158 78 212 140 270 C202 212 262 158 262 92 C262 12 175 8 140 58 Z");
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Patitos */
+    .patitos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .patitos img {
+      width: 180px;
+      animation: brillo 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes brillo {
+      0% { filter: brightness(1); }
+      100% { filter: brightness(1.3); }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 20px;
+      color: #800000;
+      padding-bottom: 30px;
     }
   </style>
 </head>
 <body>
-  <div class="corazon">❤</div>
-  <div class="mensaje">Feliz 3er Aniversario, mi amor 💕</div>
+  <header>💞 ¡¡Feliz 3er Aniversario, My lindaaaa!! 💞</header>
+
+  <div class="patitos">
+    <div class="corazones-orbita" aria-hidden="true">
+      <span class="corazon-flotante" style="--angulo: 0deg; --retraso: 0s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 36deg; --retraso: -1.2s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 72deg; --retraso: -2.4s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 108deg; --retraso: -3.6s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 144deg; --retraso: -4.8s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 180deg; --retraso: -6s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 216deg; --retraso: -7.2s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 252deg; --retraso: -8.4s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 288deg; --retraso: -9.6s;">❤</span>
+      <span class="corazon-flotante" style="--angulo: 324deg; --retraso: -10.8s;">❤</span>
+    </div>
+    <img src="C:\Users\User\Downloads\Copilot_20260820_180127.png" alt="Patitos tiernos">
+  </div>
+
+  <div class="galeria">
+    <img src="C:\Users\User\Downloads\WhatsApp Image 2026-08-20 at 00.09.01.jpeg" alt="Nosotros">
+    <img src="C:\Users\User\Downloads\WhatsApp Image 2026-08-20 at 00.02.42.jpeg" alt="Momentos juntos">
+    <img src="C:\Users\User\Downloads\WhatsApp Image 2026-08-20 at 00.02.43.jpeg" alt="Recuerdos felices">
+  </div>
+
+  <footer>Es una boludez pero costó jejeje 💕</footer>
 </body>
 </html>
